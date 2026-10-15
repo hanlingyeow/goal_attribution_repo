@@ -13,6 +13,7 @@ In exploratory analysis, AOI size is 350 x 350 px.
 │   └── prereg_latency.parquet
 ├── goal_attribution_repo.Rproj
 ├── output
+│   └── model_object.rds
 ├── readme.md
 └── scripts
     ├── 1_fit_models.R
@@ -25,11 +26,12 @@ In exploratory analysis, AOI size is 350 x 350 px.
     
 ```
 ## data
-- **prereg.parquet**: 
-- **prereg_latency.parquet**: 
-- **expl.parquet**:
+- **prereg.parquet**: Pre-registered data with proportional looking score, total viewing time and first look variables.
+- **prereg_latency.parquet**: Pre-registered data with saccadic latency variable.
+- **expl.parquet**: Exploratory data with proportional looking score, total viewing time and first look variables.
+
 ## output
-- **model_object.rds**:
+- **model_object.rds**: Output of model fitting and stability analysis.
 
 ## scripts
 - **1_fit_models.Rmd**: file with time consuming processes, creates model_object.rds
@@ -59,8 +61,8 @@ Variables in data files:
 - **`pls`**: Dependent variable measuring preferential looking score.
 - **`either_time`**: Total looking time at target or distractor object.
 - **`pls_transform`**: Transformed version of the preferential looking score for modeling.
-- **`target_firsthit`**:
-- **`latency_filtered`**:
+- **`target_firsthit`**: Whether the first fixation during the test scene was towards the target object (binary).
+- **`latency_filtered`**: The time difference between the first fixation at the goal object and the moment the hand/claw grasps the object during the first familiarisation reach.
 
 
 
